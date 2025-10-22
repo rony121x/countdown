@@ -1,0 +1,201 @@
+/* Base layout */
+* {
+  cursor: none !important;
+}
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffe4ec; /* 💗 Light pink background */
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  cursor: 0;
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5b2a50;
+}
+
+/* Floating background container */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -50px;
+  background-color: #ff6b81;
+  transform: rotate(45deg);
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff6b81;
+  border-radius: 50%;
+}
+
+.heart::before { top: -50%; left: 0; }
+.heart::after { left: 50%; top: 0; }
+
+/* Floating images */
+.floating-image {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 12px;
+  object-fit: cover;
+  animation: floatUp 10s linear infinite;
+  opacity: 0.9;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+  50% { transform: translateY(-50vh) rotate(5deg); opacity: 1; }
+  100% { transform: translateY(-110vh) rotate(-5deg); opacity: 0; }
+}
+
+/* Countdown text */
+.glow-text {
+  font-size: 2rem;
+  text-shadow: 0 0 8px #ff99cc, 0 0 16px #ff66b2, 0 0 32px #ff3385;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Buttons */
+button {
+  background-color: #ff8fb1;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+/* Calendar view */
+.calendar-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.calendar-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b43774;
+  text-shadow: 0 0 10px #ff9bbf;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.calendar-cell {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.passed-day {
+  background-color: #ffccd5;
+  color: #a46b8a;
+}
+
+.upcoming-day {
+  background-color: #ffe5ec;
+  color: #b04b75;
+}
+
+.target-day {
+  background-color: #ff5fa2;
+  color: white;
+  box-shadow: 0 0 10px #ff5fa2;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cat-paw-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: pawBounce 0.6s infinite alternate;
+}
+
+@keyframes pawBounce {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-5px) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%) translateY(0) rotate(10deg); }
+}
+
+.love-dialog {
+  position: fixed;
+  padding: 6px 10px;
+  border: 2px solid #ff69b4;
+  color: #ff69b4;
+  font-family: 'Press Start 2P', cursive; /* pixelated font */
+  font-size: 12px;
+  background-color: #ffe4ec;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeInOut 2s forwards;
+  z-index: 999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  25% { opacity: 1; transform: scale(1.05); }
+  75% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
