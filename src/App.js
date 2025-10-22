@@ -325,7 +325,7 @@ export default function App() {
                 I can't wait to finally hold you. Every day brings me closer to that smile.
                 Until then, this little note keeps you close to my heart.
               </p>
-              <p className="signature">— your kitty 🐾</p>
+              <p className="signature">— :3 🐾</p>
               <button
                 className="close-letter"
                 onClick={() => {
