@@ -281,7 +281,7 @@ export default function App() {
           </div>
         ) : (
           <div className="calendar-area">
-            <h2 className="calendar-title"></h2>
+            <h2 className="calendar-title">SOON!!!</h2>
             <div className="calendar-grid">
               {["S","M","T","W","T","F","S"].map((d, idx) => (
                 <div key={`hdr-${idx}`} className="calendar-header">{d}</div>
