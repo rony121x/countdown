@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import confetti from "canvas-confetti";
+
 import "./App.css";
 
 /* ✨ CHANGE THIS SENTENCE ONLY ✨ */
