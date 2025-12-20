@@ -316,7 +316,7 @@ body { font-family: "Poppins", sans-serif; background: #ffeef6; }
 
 .center-frame {
   position: absolute;
-  top: 42%;
+  top: 62%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
