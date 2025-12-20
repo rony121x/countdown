@@ -20,7 +20,7 @@ const FLOAT_IMAGES = [
 ];
 
 const CAT_PAW = "/catpaw.png";
-
+const CENTER_PHOTO = "/.jpg"; 
 export default function App() {
   const [hearts, setHearts] = useState([]);
   const [floatImgs, setFloatImgs] = useState([]);
@@ -153,6 +153,10 @@ export default function App() {
           I LOVE YOU &lt;3
         </div>
       ))}
+{/* 🌸 STATIC CENTER FRAME (non-interactive) */}
+      <div className="center-frame">
+        <img src={CENTER_PHOTO} alt="Us" />
+      </div>
 
       {/* ✨ THE ONLY TEXT ON SCREEN ✨ */}
       <div className="main-area">
