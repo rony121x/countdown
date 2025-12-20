@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 
 /* ✨ CHANGE THIS SENTENCE ONLY ✨ */
-const LOVE_SENTENCE = "i miss you so much. Just ask me to wait and I'll wait however long it takes shumi, I can't lose you, please. I refuse to believe we end up like this. Please dont leave me.";
+const LOVE_SENTENCE = "i miss you so much. Just ask me to wait and I'll wait however long it takes shumi, I can't lose you, please. I refuse to believe we end up like this. Please dont leave me. If you are reading this, im still right here shumi. Come back to me.";
 
 /* Assets */
 const POLAROIDS = [
