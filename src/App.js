@@ -20,7 +20,7 @@ const FLOAT_IMAGES = [
 ];
 
 const CAT_PAW = "/catpaw.png";
-const CENTER_PHOTO = "/.jpg"; 
+const CENTER_PHOTO = "/IMG_2247.jpg"; 
 export default function App() {
   const [hearts, setHearts] = useState([]);
   const [floatImgs, setFloatImgs] = useState([]);
